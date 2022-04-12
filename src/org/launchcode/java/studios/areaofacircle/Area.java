@@ -1,7 +1,5 @@
 package org.launchcode.java.studios.areaofacircle;
 
-import org.launchcode.java.Circle;
-
 import java.util.Scanner;
 
 public class Area {
