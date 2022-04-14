@@ -1,5 +1,6 @@
 package exercises;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Alice {
@@ -16,6 +17,12 @@ public class Alice {
         } else {
             System.out.println("False");
         }
+
+        Integer index = firstSentence.toLowerCase().indexOf(userInput.toLowerCase());
+        Integer length = userInput.length();
+        System.out.println("Your search term first appears at index " + index + ". Your term is " + length + " characters long.");
+        String modifiedSentence = firstSentence.replace(userInput, "Beep");
+        System.out.println(modifiedSentence);
         input.close();
     }
 }

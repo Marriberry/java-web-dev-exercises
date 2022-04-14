@@ -30,6 +30,7 @@ public class HashMapGradebook {
             }
 
         } while(!newStudent.equals(""));
+        input.close();
 
         // Print class roster
         System.out.println("\nClass roster:");
