@@ -21,6 +21,14 @@ public class Teacher {
         return(this.lastName + "," + this.firstName + " has been teaching: " + this.subject + " for " + this.yearsTeaching + " years.");
     }
 
+    public String teachFullName() {
+        return this.firstName + " " + this.lastName;
+    }
+
+    public int teachingExperience() {
+        return this.yearsTeaching + 1;
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
