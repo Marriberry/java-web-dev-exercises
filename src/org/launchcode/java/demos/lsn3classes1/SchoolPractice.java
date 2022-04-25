@@ -9,5 +9,6 @@ public class SchoolPractice {
         myself.setGpa(3.8);
         System.out.println(myself.studentInfo());
         System.out.println(myself.getName());
+        System.out.println(myself.toString());
     }
 }

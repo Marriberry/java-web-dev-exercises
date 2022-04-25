@@ -3,6 +3,8 @@ package org.launchcode.java.demos.lsn3classes1;
 // Start working here with your Student class.
 // To instantiate the Student class, add your code to the main in the file, SchoolPractice.
 
+import java.util.Objects;
+
 public class Student {
 
     private static int nextStudentId = 1;
@@ -71,4 +73,40 @@ public class Student {
         return gpa;
     }
 
+    public static String getGradeLevel(int numberOfCredits) {
+        if (numberOfCredits <= 29){
+            return "Freshman";
+        } else if (numberOfCredits <= 59){
+            return "Sophomore";
+        } else if (numberOfCredits <= 89) {
+            return "Junior";
+        } else {
+            return "Senior";
+        }
+    }
+
+    public void addGrade(int numberOfCredits, double grade) {
+        double totalQualityScore = this.gpa * this.numberOfCredits;
+        totalQualityScore += numberOfCredits * grade;
+        this.numberOfCredits += numberOfCredits;
+        this.gpa = totalQualityScore / this.numberOfCredits;
+    }
+
+    @Override
+    public String toString() {
+        return name + " (" + getGradeLevel(numberOfCredits) + " with " + getNumberOfCredits() + " credits and a GPA of " + getGpa() + ")";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return studentId == student.studentId && numberOfCredits == student.numberOfCredits && Double.compare(student.gpa, gpa) == 0 && Objects.equals(name, student.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, studentId, numberOfCredits, gpa);
+    }
 }
