@@ -61,4 +61,14 @@ public class Menu {
             System.out.println(menuItems.get(i).getDescription());
         }
     }
+
+    public void printMenuWithInfo() {
+        for(MenuItem item: menuItems ){
+            System.out.println("Menu " +
+                    "Description: " + item.getDescription() +
+                    " Price: " + item.getPrice() +
+                    " Category: " + item.getCategory() +
+                    '\n');
+        }
+    }
 }

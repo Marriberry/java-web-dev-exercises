@@ -31,9 +31,11 @@ public class Restaurant {
 
         restaurantMenuTwo.printMenu();
         restaurantMenuOne.addItem(itemThree);
-        restaurantMenuOne.printMenu();
+        //restaurantMenuOne.printItem(itemThree);
+        //restaurantMenuOne.printMenu();
         restaurantMenuOne.removeItem(itemThree);
         restaurantMenuOne.printMenu();
+        restaurantMenuTwo.printMenuWithInfo();
 
     }
 }

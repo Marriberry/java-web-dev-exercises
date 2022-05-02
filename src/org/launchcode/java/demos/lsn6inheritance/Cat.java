@@ -13,6 +13,10 @@ public class Cat {
         weight = aWeight;
     }
 
+    public Cat () {
+        weight = 13;
+    }
+
     /**** Getters and Setters ****/
 
     public boolean isTired() {
@@ -45,7 +49,7 @@ public class Cat {
 
     /**** Instance Methods ****/
 
-    // A cat is rested and hungry after it sleeps
+//     A cat is rested and hungry after it sleeps
     public void sleep() {
         tired = false;
         hungry = true;
